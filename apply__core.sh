@@ -71,13 +71,13 @@ cd $build_path_ansible \
 && ansible-playbook -i inventory generic-dc.yml &
 thread9=$!
 
-echo "waiting for thread7 (rdg)..."
-wait $thread7
-echo "thread7 (rdg) exited with $?"
+#echo "waiting for thread7 (rdg)..."
+#wait $thread7
+#echo "thread7 (rdg) exited with $?"
 
-echo "waiting for thread8 (dbfs)..."
-wait $thread8
-echo "thread8 (dbfs) exited with $?"
+#echo "waiting for thread8 (dbfs)..."
+#wait $thread8
+#echo "thread8 (dbfs) exited with $?"
 
 echo "waiting for thread9 (generic-dc)..."
 wait $thread9
