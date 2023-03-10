@@ -33,9 +33,9 @@ wait $thread3
 echo "thread3 (storage) exited with $?"
 
 # thread4 -> depends_on: thread2 && thread3
-#echo "creating 04_wg"
-#cd $build_path_terraform/04_wg && ./build.sh &
-#thread4=$!
+echo "creating 04_wg"
+cd $build_path_terraform/04_wg && ./build.sh &
+thread4=$!
 
 # thread5 -> depends_on: thread2 && thread3
 echo "creating 05_dc"
@@ -55,8 +55,8 @@ thread5=$!
 
 
 #echo "waiting for thread4 (wg)..."
-#wait $thread4
-#echo "thread4 (wg) exited with $?"
+wait $thread4
+echo "thread4 (wg) exited with $?"
 
 echo "waiting for thread5 (dc)..."
 wait $thread5
