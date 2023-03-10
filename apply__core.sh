@@ -52,6 +52,17 @@ echo "creating 08_dbfs"
 cd $build_path_terraform/08_dbfs && ./build.sh &
 thread8=$!
 
+
+
+# thread88 -> depends_on: thread2 && thread3
+echo "creating 88_win_vm"
+cd $build_path_terraform/vm_win && ./build.sh &
+thread88=$!
+
+
+
+
+
 echo "waiting for thread4 (wg)..."
 wait $thread4
 echo "thread4 (wg) exited with $?"
