@@ -54,9 +54,9 @@ thread5=$!
 
 
 
-echo "waiting for thread4 (wg)..."
-wait $thread4
-echo "thread4 (wg) exited with $?"
+#echo "waiting for thread4 (wg)..."
+#wait $thread4
+#echo "thread4 (wg) exited with $?"
 
 echo "waiting for thread5 (dc)..."
 wait $thread5
