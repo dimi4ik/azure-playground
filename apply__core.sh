@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash 
 set -e
 
 current_dir=$(pwd)
@@ -43,8 +43,8 @@ cd $build_path_terraform/05_dc && ./build.sh &
 thread5=$!
 
 # thread7 -> depends_on: thread2 && thread3
-#echo "creating 07_rdg"
-#cd $build_path_terraform/07_rdg && ./build.sh &
+echo "creating 07_rdg"
+cd $build_path_terraform/07_rdg && ./build.sh &
 #thread7=$!
 
 # thread8 -> depends_on: thread2 && thread3
@@ -69,9 +69,9 @@ cd $build_path_ansible \
 && ansible-playbook -i inventory generic-dc.yml &
 thread9=$!
 
-#echo "waiting for thread7 (rdg)..."
-#wait $thread7
-#echo "thread7 (rdg) exited with $?"
+echo "waiting for thread7 (rdg)..."
+wait $thread7
+echo "thread7 (rdg) exited with $?"
 
 echo "waiting for thread8 (dbfs)..."
 wait $thread8
