@@ -45,7 +45,7 @@ thread5=$!
 # thread7 -> depends_on: thread2 && thread3
 echo "creating 07_rdg"
 cd $build_path_terraform/07_rdg && ./build.sh &
-#thread7=$!
+thread7=$!
 
 # thread8 -> depends_on: thread2 && thread3
 echo "creating 08_dbfs"
@@ -73,9 +73,9 @@ echo "waiting for thread7 (rdg)..."
 wait $thread7
 echo "thread7 (rdg) exited with $?"
 
-echo "waiting for thread8 (dbfs)..."
-wait $thread8
-echo "thread8 (dbfs) exited with $?"
+#echo "waiting for thread8 (dbfs)..."
+#wait $thread8
+#echo "thread8 (dbfs) exited with $?"
 
 echo "waiting for thread9 (generic-dc)..."
 wait $thread9
