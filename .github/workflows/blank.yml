@@ -13,4 +13,4 @@ jobs:
       - name: Löschen von Statusberichten
         run: |
           TOKEN=${{ secrets.GITHUB_TOKEN }}
-          API="https://api.github.com/repos/azure-äplayground/statuses"
+          API="https://api.github.com/repos/azure-playground/statuses"
