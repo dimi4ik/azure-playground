@@ -56,10 +56,8 @@ thread8=$!
 
 # thread88 -> depends_on: thread2 && thread3
 echo "creating 88_win_vm"
-cd $build_path_terraform/vm_win && ./build.sh &
+cd $build_path_terraform/09_msrds && ./build.sh &
 thread88=$!
-
-
 
 
 
