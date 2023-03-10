@@ -1,5 +1,6 @@
 ---
 - hosts: dc
+  ignore_errors: true
   vars_files:
     - vars/generic.yml
 
